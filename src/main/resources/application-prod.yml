@@ -1,3 +1,4 @@
 google:
   gemini:
     api-key: ${GOOGLE_GEMINI_API_KEY}
+    instruction: ${GOOGLE_GEMINI_INSTRUCTION}
