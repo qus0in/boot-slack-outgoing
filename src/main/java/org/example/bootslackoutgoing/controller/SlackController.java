@@ -17,7 +17,10 @@ public class SlackController {
 //            throw new RuntimeException("자문자답 금지");
             return ResponseEntity.ok(new SlackAnswerDTO(""));
         }
-        System.out.println(dto);
-        return ResponseEntity.ok(new SlackAnswerDTO("<@%s> %s에 대한 대답입니다".formatted(dto.user_id(), dto.text())));
+//        System.out.println(dto);
+
+        String answer = "<@%s> %s에 대한 대답입니다".formatted(dto.user_id(), dto.text());
+
+        return ResponseEntity.ok(new SlackAnswerDTO(answer));
     }
 }
